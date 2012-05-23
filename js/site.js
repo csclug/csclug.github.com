@@ -6,8 +6,8 @@ $(function() {
 var csclug = {
 
     initStyling: function() {
-
         this.getCalendarEvents();
+
 
     },
     initEvents: function() {
@@ -22,39 +22,40 @@ var csclug = {
         $.getJSON(url,function(json){
 
             var html = '<ul class="unstyled" id="eventsFeed">';
-            if(json.length) {
-                $.each(json.feed.entry,function(i,entry) {
 
-                    html += '<li><h3><span class="event_month label label-info">'
-                        + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "MMM")
-                        + ' '
-                        + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "dd")
-                        + ', '
-                        + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "yyyy")
-                        + ' @ '
-                        + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "h")
-                        + ':'
-                        + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "mm") + 'pm'
-                        + ' to '
-                        + $.format.date(entry['gd$when'][0].endTime + ' 00:00:00.000', "h")
-                        + $.format.date(entry['gd$when'][0].endTime + ' 00:00:00.000', "mm") + 'pm'
-                        + '</span></h3>'
-                        + '<h4><i class="icon-calendar"></i><a href="'
-                        + entry.link[0].href
-                        + '">'
-                        + entry.title.$t
-                        + '</a>'
-                        + '</h4><p>'
-                        + entry.content.$t.substring(0,169)
-                        + '</p></li>';
+            $.each(json.feed.entry,function(i,entry) {
 
-                });
-            }
+                html += '<li><h3><span class="event_month label label-info">'
+                    + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "MMM")
+                    + ' '
+                    + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "dd")
+                    + ', '
+                    + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "yyyy")
+                    + ' @ '
+                    + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "h")
+                    + ':'
+                    + $.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "mm") + 'pm'
+                    + ' to '
+                    + $.format.date(entry['gd$when'][0].endTime + ' 00:00:00.000', "h")
+                    + $.format.date(entry['gd$when'][0].endTime + ' 00:00:00.000', "mm") + 'pm'
+                    + '</span></h3>'
+                    + '<h4><i class="icon-calendar"></i><a href="'
+                    + entry.link[0].href
+                    + '">'
+                    + entry.title.$t
+                    + '</a>'
+                    + '</h4><p>'
+                    + entry.content.$t.substring(0,169)
+                    + '</p></li>';
+
+            });
+
             html += '</ul>';
 
             $('#calendar').html(html);
 
         });
+
     }
 
 };
