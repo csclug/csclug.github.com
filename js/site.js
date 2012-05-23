@@ -12,7 +12,7 @@ var csclug = {
         $.getJSON(url,function(json){
 
                 var html = '<ul class="unstyled" id="eventsFeed">';
-
+            if(json.length) {
                 $.each(json.feed.entry,function(i,entry) {
 
                     html += '<li><h3><span class="event_month label label-info">'
@@ -39,7 +39,7 @@ var csclug = {
                          + '</p></li>';
 
                 });
-
+            }
                 html += '</ul>';
 
                 $('#calendar').html(html);

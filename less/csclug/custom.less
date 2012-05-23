@@ -822,12 +822,13 @@ form.well {
 
 /* CSCLUG edits */
 
-header {
-   background: #e5e5e5 url(http://subtlepatterns.com/patterns/worn_dots.png) repeat top left;
-   border-bottom: 2px solid #413839;
-   .box-shadow();
-   img {margin-left: 25px;}
-}
+.home {
+    header {
+       background: #e5e5e5 url(http://subtlepatterns.com/patterns/worn_dots.png) repeat top left;
+       border-bottom: 2px solid #413839;
+       .box-shadow();
+       img {margin-left: 25px;}
+    }
 .hero-unit {
     padding: 30px;
       margin-bottom: 10px;
@@ -844,6 +845,15 @@ header {
         color: @heroUnitLeadColor;
       }
 
+}
+}
+.projects {
+    header {
+       background:none;
+       border-bottom: none;
+       margin-top:25px;
+       img {margin-left: 25px;}
+    }
 }
 .label.butterfat {
     margin:10px 0 10px 0;
