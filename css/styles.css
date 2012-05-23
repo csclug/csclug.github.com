@@ -822,14 +822,14 @@ a.thumbnail:hover{border-color:#0088cc;-webkit-box-shadow:0 1px 4px rgba(0, 105,
 body{position:relative;padding-top:30px;background-color:#fff;}
 .navbar-fixed-top .brand{padding-right:0;padding-left:0;margin-left:20px;float:right;font-weight:bold;color:#000;text-shadow:0 1px 0 rgba(255, 255, 255, 0.1),0 0 30px rgba(255, 255, 255, 0.125);-webkit-transition:all .2s linear;-moz-transition:all .2s linear;transition:all .2s linear;}
 .navbar-fixed-top .brand:hover{text-decoration:none;}
-section{padding-top:60px;}
-hr.soften{height:1px;margin:24px 0;background-image:-webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));border:0;}
+section{padding-top:30px;}
+hr.soften{height:1px;margin:14px 0;background-image:-webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));background-image:-o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));border:0;}
 .jumbotron{position:relative;}
 .jumbotron h1{margin-bottom:9px;font-size:81px;font-weight:bold;letter-spacing:-1px;line-height:1;}
 .jumbotron p{margin-bottom:18px;font-weight:300;}
 .jumbotron .btn-large{font-size:20px;font-weight:normal;padding:14px 24px;margin-right:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
 .jumbotron .btn-large small{font-size:14px;}
-.masthead{padding-top:30px;padding-bottom:20px;margin-bottom:40px;}
+.masthead{padding-top:30px;padding-bottom:20px;}
 .masthead h1,.masthead p{text-align:center;}
 .masthead h1{margin-bottom:18px;}
 .masthead p{margin-left:5%;margin-right:5%;font-size:30px;line-height:36px;}
@@ -914,3 +914,7 @@ form.well{padding:14px;}
 .projects header{background:none;border-bottom:none;margin-top:25px;}.projects header img{margin-left:25px;}
 .label.butterfat{margin:10px 0 10px 0;font-size:35px;}
 .sponsors li{margin:10px 0 10px;}
+#flickr-badge{padding:5px 0 0 10px;}
+#flickr-badge .flickr_badge_image{display:inline;}
+#flickr-badge .flickr_badge_image a img{width:100px;margin:0px 15px 15px 0px;opacity:1;-webkit-transition:all 300ms;}
+#flickr-badge .flickr_badge_image a img:hover{opacity:.5;-webkit-transition:all 300ms;}
