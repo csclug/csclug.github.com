@@ -829,7 +829,7 @@ hr.soften{height:1px;margin:14px 0;background-image:-webkit-linear-gradient(left
 .jumbotron p{margin-bottom:18px;font-weight:300;}
 .jumbotron .btn-large{font-size:20px;font-weight:normal;padding:14px 24px;margin-right:10px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
 .jumbotron .btn-large small{font-size:14px;}
-.masthead{padding-top:30px;padding-bottom:20px;}
+.masthead{padding-top:30px;padding-bottom:20px;margin-bottom:40px;}
 .masthead h1,.masthead p{text-align:center;}
 .masthead h1{margin-bottom:18px;}
 .masthead p{margin-left:5%;margin-right:5%;font-size:30px;line-height:36px;}
