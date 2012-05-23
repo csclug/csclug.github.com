@@ -38,7 +38,7 @@ var csclug = {
                          + entry.content.$t.substring(0,169)
                          + '</p></li>';
 
-                })
+                });
 
                 html += '</ul>';
 
