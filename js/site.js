@@ -45,37 +45,6 @@ var csclug = {
                 $('#calendar').html(html);
 
             });
-//        $.getJSON('http://www.google.com/calendar/feeds/developer-calendar@google.com/public/full?alt=json-in-script&callback=insertAgenda&orderby=starttime&max-results=2&singleevents=true&sortorder=ascending&futureevents=true', function(data) {
-//            var items = [];
-//
-//            $.each(data.feed.entry, function(i, entry) {
-//                items.push('<li id="' + i + '">' + entry.title.$t + '</li>');
-//            });
-//
-//            $('<ul/>', {
-//                'class': 'my-new-list',
-//                html: items.join('')
-//            }).appendTo('body');
-//        });
-//
-//        var url = 'http://www.google.com/calendar/feeds/' + calID + '/public/full?alt=json-in-script&max-results=25&futureevents=true';
-//        var html = '';
-//        $.getJSON(url, function(json) {
-//             alert(json);
-//            html = '<ul id="eventsFeed">';
-//            $.each(json.feed.entry,function(i,entry) {
-//
-//              html += '<li>'
-//                   + 'test' //$.format.date(entry['gd$when'][0].startTime + ' 00:00:00.000', "yyyy-MM-dd")
-//                   + '</li>';
-//
-//            });
-//
-//            html += '</ul>';
-//
-//            $('#calendar').html(html);
-//
-//        });
 
     },
     initEvents: function() {
