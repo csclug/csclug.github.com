@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <title>LUG MUC - CSCLUG.org</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="tutorials" data-spy="scroll" data-target=".subnav" data-offset="50">
+<!-- Navbar
+    ================================================== -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="./index.html">CSCLUG</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="">
+                        <a href="./index.html">Welcome</a>
+                    </li>
+                    <li class="">
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li class="active">
+                        <a href="tutorials.html">Tutorials</a>
+                    </li>
+                    <li class="">
+                        <a href="bookReviews.html">Book Reviews</a>
+                    </li>
+                    <li class="">
+                        <a href="calendar.html">Calendar</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <header class="jumbotron subhead" id="overview">
+        <h1>How To Connect to the Conference Chat Server</h1>
+        <p class="lead">From Hacking to Tunneling to Clouds and Green Pastures, learn from our fun group.</p>
+
+    </header>
+    <hr class="soften">
+    <section id="welcome">
+
+        <div class="row">
+            <div class="span8">
+                <p>This is a howto describing connecting to the chat conference room. Anyone can connect and just "hang out" - or if you have specific questions or ideas this is a great way to communicate those. Even if no one is in the room, feel free to type a message and someone will eventually respond (you can see the history for the room in your client as well as online).</p>
+                <h2>Install a Jabber client</h2>
+                <p>You will first need to download and install a Jabber client. A list of clients can be found at <a href="http://xmpp.org/xmpp-software/clients/" target="_blank">http://xmpp.org/xmpp-software/clients/</a>. A good one is Pidgin, which runs on Linux and Windows. The following instructions assume that you're using Pidgin.</p>
+                <h2>Create an account</h2>
+                <p>Jabber is different from other chat protocols like AOL Instant Messanger and MSN Messanger which have a single server. There are literally hundreds of Jabber servers. You can create an account on any of the public Jabber servers. Each Jabber server can talk to any of the other Jabber servers, enabling you to then talk to people no matter which Jabber server they are using. This means that it really doesn't matter which server you create an account on. If you have a GMail account, you can connect to Google's jabber server by following the instructions here (then skip to the "Join Chat Room" section).</p>
+                <p>To create an account, first start Pidgin. Then click on the "Accounts" button. Click "Add", and then "Jabber" from the top dropdown. Type in your preferred screen name. For the "server" field, either use jabber.org or one of the other servershere. Your resource is just a description of the computer you are using, and can be anything (like "home computer" or "my laptop"). Then type in your preferred password, and click "Register".</p>
+                <h2>Join a chat room</h2>
+                <p>Once you are signed in to a Jabber server, click "Buddies" at the top, then "Add Chat". The room is "csclug" and the server is "conference.butterfat.net". You don't need a password. Just click "Add". The room "csclug" should have been added to your buddy list. Just double click on the room, and you should be in the room.</p>
+                <h2>Room logs</h2>
+                <p>HTML logs of the chat room can be viewed at the following url :<br />
+<a href="http://coop.butterfat.net/ejabberd/csclug@conference.butterfat.net/" target="_blank">http://coop.butterfat.net/ejabberd/csclug@conference.butterfat.net/</a></p>
+            </div>
+            <div class="span4">
+                <h3>Upcoming Events</h3>
+                <div id="calendar"></div>
+                <div class="well">
+
+                    <ul class="unstyled sponsors">
+                        <li class="nav-header">
+                            Our Longtime Supporters
+                        </li>
+                        <li class="">
+                            <a href="http://oreilly.com/"><img src="http://ug.oreilly.com/promote/ug_ad_250_viguy.gif" alt="Oreilly User Group Program"></a>
+                        </li>
+                        <li>
+                            <h2> <a href="http://www.butterfat.net/"><span class="label butterfat">Butterfat, LLC.</span></a></h2>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Designed and built from <a href="http://twitter.com/twitter" target="_blank">@twitter</a>'s Bootstrap and modified by <a href="http://twitter.com/mdo" target="_blank">@calweb</a> .</p>
+        <p>This site is licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    </footer>
+</div>
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="js/jquery.dateFormat-1.0.js"></script>
+<script type="text/javascript" src="js/site.js"></script>
+</body>
+</html>
