@@ -55,76 +55,76 @@
 
 
 <h1>Quick Internet Sharing With a Laptop NAT Gateway</h1>
-<p>This text assumes that you know the basic structure of your particular distribution including configuration file locations, network configuration, and root access.</br></br>
+<p>This text assumes that you know the basic structure of your particular distribution including configuration file locations, network configuration, and root access.<br><br/>
 
-<h2>Assumptions:</h2></br></br>
-1. Two network interfaces exist on your server machine:</br>
-a. A wired interface (eth0) which will interface the local network</br>
-b. A wireless interface (wlan0) which will interface the internet</br>
+<h2>Assumptions:</h2><br><br/>
+1. Two network interfaces exist on your server machine: <br/>
+a. A wired interface (eth0) which will interface the local network<br/>
+b. A wireless interface (wlan0) which will interface the internet <br/>
 2. All required software packages (NAT, iptables, etc) are installed on the
-server machine</br>
-3. A wired interface exists on the client machine (eth0)</br>
+server machine <br/>
+3. A wired interface exists on the client machine (eth0)<br/>
 4. All commands should be issued as a super user who has /sbin in their
-path</br>
+path<br/>
 5. Client is connected to the server via ethernet cables and a switch or
-directly via a patch cable</br></br>
+directly via a patch cable<br><br/>
 
-<h2>Server Procedure:</h2></br></br>
-1. Configure eth0 with a static IP:</br>
-a. IP Address: 192.168.0.1</br>
-b. Netmask: 255.255.255.0</br>
-c. Broadcast: 192.168.0.255</br>
+<h2>Server Procedure:</h2><br><br/>
+1. Configure eth0 with a static IP:<br/>
+a. IP Address: 192.168.0.1<br/>
+b. Netmask: 255.255.255.0<br/>
+c. Broadcast: 192.168.0.255<br/>
 NOTE: Network managers will override these settings when an active link is
 detected. For best results, disable the management of this device by a
-network manager and configure the device manually using 'ifconfig'.</br>
+network manager and configure the device manually using 'ifconfig'.<br/>
 NOTE 2: You should only have to set the IP address. All other settings will
-default based on the assigned IP address.</br>
+default based on the assigned IP address.<br/>
 Example:
 ifconfig eth0 192.168.0.1
 
-2. Configure IP forwarding.</br>
+2. Configure IP forwarding.<br/>
 a. IP forwarding is VERY distribution specific. For most distributions a flag
 can be manually set in /proc/sys/net/ipv4/ip_forward with a command:
-echo 1 > /proc/sys/net/ipv4/ip_forward</br>
+echo 1 > /proc/sys/net/ipv4/ip_forward<br/>
 b. Most distributions also have the ability to edit a script in the /etc/init.d
 or /etc/rc.d directory to allow IP forwarding at startup. Most times all you
-have to do is set the script's file permission to executable.</br>
+have to do is set the script's file permission to executable.<br/>
 c. For Ubuntu users, this setting is found in /etc/sysctl. The parameter is
-#net.ipv4.conf.default.forwarding=1</br>
+#net.ipv4.conf.default.forwarding=1<br/>
 To enable this at startup, remove the comment(#) from this line. See
-man sysctl for other options.</br>
+man sysctl for other options.<br/>
 
-3. Configure iptables</br>
+3. Configure iptables<br/>
 a. Allow packet forwarding with:
-iptables -P FORWARD ACCEPT</br>
+iptables -P FORWARD ACCEPT<br/>
 b. Configure Network Address Translation (NAT) with:
 iptables --table nat -A POSTROUTING -o wlan0 -j MASQUERADE
 NOTE: This has absolutely no security. All packets received will be
 forwarded to every machine on the network attached to the eth0
-device. See man iptables for more options to increase security.</br></br>
+device. See man iptables for more options to increase security.<br><br/>
 
-<h2>Client Procedure:</h2></br></br>
-1. Configure eth0 with a static IP:</br>
+<h2>Client Procedure:</h2><br><br/>
+1. Configure eth0 with a static IP:<br/>
 a. IP Address: 192.168.0.100 (any IP in the range 192.168.0.2 - 192.168.0.254
-will be fine as long as it is unique on the network)</br>
-b. Netmask: 255.255.255.0</br>
-c. Broadcast: 192.168.0.255</br>
-d. Gateway: 192.168.0.1</br>
+will be fine as long as it is unique on the network)<br/>
+b. Netmask: 255.255.255.0<br/>
+c. Broadcast: 192.168.0.255<br/>
+d. Gateway: 192.168.0.1<br/>
 NOTE: Network managers will override these settings when an active link is
 detected. For best results, disable the management of this device by a
-network manager and configure the device manually using 'ifconfig'.</br>
+network manager and configure the device manually using 'ifconfig'.<br/>
 NOTE 2: You should only have to set the IP address. All other settings will
-default based on the assigned IP address.</br>
+default based on the assigned IP address.<br/>
 Example:
 ifconfig eth0 192.168.0.100
 
-2. Configure DNS:</br>
-a. On the server machine, view the file /etc/resolv.conf</br>
-b. Copy the nameserver lines to /etc/resolv.conf on the client machine</br>
-c. Example nameserver line:</br>
-nameserver 192.168.1.1</br>
+2. Configure DNS:<br/>
+a. On the server machine, view the file /etc/resolv.conf<br/>
+b. Copy the nameserver lines to /etc/resolv.conf on the client machine<br/>
+c. Example nameserver line:<br/>
+nameserver 192.168.1.1<br/>
 
-This material has been digested from various tutorials across the internet. The goal behind this tutorial is to rapidly establish an internet connection for a local wired network through a laptop's wireless internet connection.</p>
+This material has been digested from various tutorials across the internet. The goal behind this tutorial is to rapidly establish an internet connection for a local wired network through a laptop's wireless internet connection.<p></p>
 
             </div>
             <div class="span4">
