@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Tutorials - CSCLUG.org</title>
+    <title>Installing Perl Net::SFTP on Ubuntu</title>
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -34,9 +34,7 @@
                     <li class="">
                         <a href="calendar.html">Calendar</a>
                     </li>
-                    <li class="">
-                        <a href="localGroups.html">Local Groups</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -45,7 +43,7 @@
 
 <div class="container">
     <header class="jumbotron subhead" id="overview">
-        <h1>Tutorials</h1>
+        <h1>Installing Perl Net::SFTP on Ubuntu</h1>
         <p class="lead">From Hacking to Tunneling to Clouds and Green Pastures, learn from our fun group.</p>
 
     </header>
@@ -54,23 +52,34 @@
 
         <div class="row">
             <div class="span8">
-                <h2>CSCLUG Communications</h2>
-                <ul>
-                    <li><a href="lug_muc.html">Connecting to the conference chat server</a></li>
-                </ul>
-                <h2>Developer stuff</h2>
-		<ul>
-		    <li><a href="Installperl.html">Installing Perl Net::SFTP on Ubuntu</a></li>
-		    <li><a href="Minidev.html">Mini-HowTo: Setup a Development Environment for J2ME Applications in Ubuntu 10.04</a></li>
-		</ul>
 
-                <h2>Networking stuff</h2>
+ 
+	
 
-		<ul>
-		    <li><a href="NatGateway.html">Quick Internet Sharing With a Laptop NAT Gateway</a></li>
-		</ul>
-								<p>Reference to move tutorials from: <a href="https://sites.google.com/a/csclug.org/csclug/">https://sites.google.com/a/csclug.org/csclug/</a></p>
-            </div>
+<h1>Installing Perl Net::SFTP on Ubuntu</h1><br/>
+
+
+<p>This perl module is not a package in Ubuntu nor does cpan make it pleasant to install. I've spent some time with virtual machines testing out the dependencies for Net::SFTP. Follow these steps (and package lists) in order! There are many places where things can go wrong and several places where the only way to recover is to start from scratch. If cpan asks any questions during the install I went with the default choice.<br><br/>
+
+
+
+
+1.Install the following with synaptic/apt-get: libyaml-dev libgmp3-dev libpari-dev libmath-gmp-perl libmath-bigint-gmp-perl<br><br/>
+
+2.Manually install pari from ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/ I'm using pari-2.3.4.tar.gz<br><br/>
+
+3.Install using cpan: YAML<br><br/>
+
+4.Update cpan by typing: install CPAN 5. Re-Initialize cpan by typing: reload CPAN 6. Exit cpan because I don't trust it.<br><br/>
+
+5.Grab Math::Pari from cpan.perl.org and manually install<br><br/>
+
+6.Install using cpan: Math::GMP Math::BigInt Math::BigInt::FastCalc Math::BigRat Net::SSH::Perl Net::SFTP<br><br/>
+</p>
+
+ 
+
+	      
             <div class="span4">
                 <h3>Upcoming Events</h3>
                 <div id="calendar"></div>
@@ -89,6 +98,7 @@
 
                     </ul>
                 </div>
+		</div>	
             </div>
         </div>
     </section>
